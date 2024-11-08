@@ -1,0 +1,19 @@
+p {
+    border: 2px red solid;
+    margin: 10px 20px;
+    padding: 30px 100px;
+}
+
+hr{
+    border-top: 5px solid darkgreen;
+    border-bottom: 5px solid darkgreen;
+    background-color: white;
+    height: 10px;
+}
+
+#elemento_especial{
+    color:red;
+}
+.ultimo_elemento{
+    color: blue;
+}
