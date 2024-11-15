@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Etiquetas de formulario</title>
+    <meta charset="UTF-8">
+    <meta name="title" content="Etiquetas de formulario">
+    <meta name="description" content="Ejemplo del uso de etiquetas de formulario">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre y apellidos: </label>
+            <input id="nombre" name="nombre" type="text"  required minlength="4" maxlength="8" size="100" placeholder="Escribe tu nombre"><br>
+
+            <label for="sexo">Sexo: </label>
+            <select id="sexo" name="sexo">
+                <!--Etiqueta option-->
+                <option value="1">Hombre</option>
+                <option value="2" selected>Mujer</option>
+                <option value="3">Otro</option>
+            </select><br><br>
+
+            <label>Edad: </label>
+            <input type="checkbox" value="20-39"> 20-39
+            <input type="checkbox" value="40-59"> 40-59
+            <input type="checkbox" value="60-79"> 60-79<br><br>
+          
+          
+            <label>Edad: </label>
+
+            <input type="radio" id="rango1" name="edad1" value="20-39" checked />
+            <label for="rango1">20-39</label>
+          
+            <input type="radio" id="rango2" name="edad1" value="40-59" />
+            <label for="rango2">40-59</label>
+         
+            <input type="radio" id="rango3" name="edad1" value=">60-79" />
+            <label for="rango3">60-79</label>
+            <br><br>
+
+            <label for="calendario">Fecha de Nacimiento:</label>
+            <input type="date" id="calendario" name="calendario"/><br><br>
+
+            
+            
+            <label for="email">Email: </label>
+            <input id="email" type="email"><br><br>
+
+
+
+            <label for="estudios">Estudios: </label>
+            <select id="estudios">
+                <optgroup label="Estudios Universitarios">
+                    <option>Doctorado</option>
+                    <option>Máster</option>
+                    <option>Grado</option>
+                </optgroup>
+                <optgroup label="Ciclo Formativo">
+                    <option>Grado Superior</option>
+                    <option>Grado Medio</option>
+                </optgroup>
+            </select><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label for="navegador">Elige tu navegador favorito: </label>
+            <input id="navegador" list="browsers">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Internet Explorer">
+                <option value="Opera">
+                <option value="Safari">
+                <option value="Microsoft Edge">
+            </datalist><br><br>
+
+            <label for="mensaje">Escribe tu mensaje: </label>
+            <textarea rows="10" cols="50" placeholder="Mensaje" id="mensaje"></textarea>
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
