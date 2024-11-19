@@ -16,11 +16,13 @@
             <input id="nombre" name="nombre" type="text"  required minlength="4" maxlength="8" size="100" placeholder="Escribe tu nombre"><br>
 
             <label for="sexo">Sexo: </label>
-            <select id="sexo" name="sexo">
+            <select id="sexo" required>
                 <!--Etiqueta option-->
-                <option value="1">Hombre</option>
-                <option value="2" selected>Mujer</option>
-                <option value="3">Otro</option>
+                <option disabled selected hidden value="">Selecciona una opción</option>
+                <option value="H">Hombre</option>
+                <option value="M">Mujer</option>
+                <option value="O">Otro</option>
+            
             </select><br><br>
 
             <label>Edad: </label>
@@ -47,12 +49,40 @@
             
             
             <label for="email">Email: </label>
-            <input id="email" type="email"><br><br>
+            <input  id="email" 
+                    name="email" 
+                    type="email" 
+                    required 
+                    placeholder="correo@ejemplo.com"
+                    pattern=".+@g\.educaand\.es"
+                    title="Introduce tu correo de @g.educaand.es">
+                    
+                    
+                    
+            <br><br>
 
-
+            <label for="telefono">Teléfono</label>
+            <input  type="tel" 
+                    id="telefono" 
+                    name="telefono" 
+                    placeholder="+34 123456789"
+                    pattern="\+[0-9]{2}\s\d{9}" 
+                    title="Introduce con formato +34 123456789 "
+                    required>   
+              <br><br>
+              <label for="direccion">Dirección</label>
+              <textarea id="direccion" name="direccion" maxlength="300" ></textarea>
+              <br><br>
+              <label for="contrasena">Contraseña</label>
+              <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$">
+              <br><br>
+              <label for="contrasena2">Confirmar contraseña</label>
+              <input type="password" id="contrasena2" name="contrasena2" placeholder="Contraseña">
+              <br><br>
 
             <label for="estudios">Estudios: </label>
-            <select id="estudios">
+            <select id="estudios" name="estudios" >
                 <optgroup label="Estudios Universitarios">
                     <option>Doctorado</option>
                     <option>Máster</option>
@@ -76,11 +106,22 @@
                 <option value="Safari">
                 <option value="Microsoft Edge">
             </datalist><br><br>
-
+            <label for="frutas">Selecciona una fruta:</label>
+            <input list="frutas" id="fruta" name="fruta" />
+            
+            <datalist id="frutas">
+              <option value="Manzana"></option>
+              <option value="Banana"></option>
+              <option value="Naranja"></option>
+              <option value="Uva"></option>
+              <option value="Pera"></option>
+            </datalist>
+            <br><br>
             <label for="mensaje">Escribe tu mensaje: </label>
             <textarea rows="10" cols="50" placeholder="Mensaje" id="mensaje"></textarea>
         </fieldset>
-        <input type="submit" value="Enviar">
+        <button type="submit">Enviar</button>
+        <button type="reset">Reiniciar formulario</button>
     </form>
 </body>
 
