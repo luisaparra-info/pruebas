@@ -1,0 +1,49 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(131, 50, 104);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(4, 63, 53);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(124, 114, 3);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(100, 205, 105);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(227, 123, 207);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+  tbody {
+    font-size: 95%;
+    font-style: italic;
+  }
+  
+  tfoot tr:nth-child(1) td {
+    font-weight: bold;
+    background-color: cadetblue;
+  }
+  tfoot td:first-child{
+    text-align: right;
+  }
+
+  
