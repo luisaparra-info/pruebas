@@ -1,15 +1,13 @@
 *{
-    color: darkgray;
+    color:black;
 }
-
-h1{
-    color: #000;
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: underline;
+    font-weight: 800;
+    color: #3F51B5;
 }
-
-.h1_rojo{
-    color: red;
-}
-
-#parrafo_1{
-    font-style: italic;
+ul li a {
+    text-decoration: none;
 }
