@@ -1,0 +1,15 @@
+*{
+    color: darkgray;
+}
+
+h1{
+    color: #000;
+}
+
+.h1_rojo{
+    color: red;
+}
+
+#parrafo_1{
+    font-style: italic;
+}
