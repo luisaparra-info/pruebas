@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilo en formularios</title>
     <link href="./styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+
 </head>
 <body>
     <form>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
-     
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
 
+        <div class="input-container required">
+            <i class="material-icons input-icon">person</i>
+            <input type="text" class="icon-input" placeholder="Nombre">
+          </div>
+          
+          <div class="input-container">
+            <i class="material-icons input-icon">email</i>
+            <input type="text" class="icon-input" placeholder="Correo electrónico">
+          </div>
+          
+          <div class="input-container">
+            <i class="material-icons input-icon">lock</i>
+            <input type="password" class="icon-input" placeholder="Contraseña">
+          </div>
+       
         <h2>Ejemplo de Textarea con resize</h2>
-    <textarea placeholder="Escribe aquí..."></textarea>
+        <textarea placeholder="Escribe aquí..."></textarea>
      
         <input type="submit" value="Enviar">
      </form>    
