@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Enlaces</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Gestión de Enlaces</h1>
+  </header>
+
+  <main>
+    <section class="categorias">
+      <div class="categoria" id="categoriaRecursosEducativos">
+        <h2>Recursos Educativos</h2>
+        <ul id="categoriaRecursosEducativosList"></ul>
+      </div>
+
+      <div class="categoria" id="categoriaRedesSociales">
+        <h2>Redes Sociales</h2>
+        <ul id="categoriaRedesSocialesList"></ul>
+      </div>
+
+      <div class="categoria" id="categoriaNoticiasYBlogs">
+        <h2>Noticias y Blogs</h2>
+        <ul id="categoriaNoticiasYBlogsList"></ul>
+      </div>
+
+      <div class="categoria" id="categoriaHerramientasDeDesarrollo">
+        <h2>Herramientas de Desarrollo</h2>
+        <ul id="categoriaHerramientasDeDesarrolloList"></ul>
+      </div>
+
+      <div class="categoria" id="categoriaVideosEducativos">
+        <h2>Videos Educativos</h2>
+        <ul id="categoriaVideosEducativosList"></ul>
+      </div>
+
+      <div class="categoria" id="categoriaReferenciasYDocumentacion">
+        <h2>Referencias y Documentación</h2>
+        <ul id="categoriaReferenciasYDocumentacionList"></ul>
+      </div>
+    </section>
+
+    <section class="formulario">
+      <h2>Añadir Enlace</h2>
+      <form id="formEnlace">
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" required>
+
+        <label for="url">URL:</label>
+        <input type="url" id="url" required>
+
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" required>
+          <option value="categoriaRecursosEducativos">Recursos Educativos</option>
+          <option value="categoriaRedesSociales">Redes Sociales</option>
+          <option value="categoriaNoticiasYBlogs">Noticias y Blogs</option>
+          <option value="categoriaHerramientasDeDesarrollo">Herramientas de Desarrollo</option>
+          <option value="categoriaVideosEducativos">Videos Educativos</option>
+          <option value="categoriaReferenciasYDocumentacion">Referencias y Documentación</option>
+        </select>
+
+        <button type="submit">Añadir Enlace</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* Reseteo básico para evitar problemas de márgenes y paddings predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo general para el body */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  /* Encabezado */
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  /* Formulario (arriba) */
+  .formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Espacio abajo para separar el formulario de las categorías */
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto; /* Centrado en la pantalla */
+  }
+  
+  .formulario h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Contenedor principal para las categorías */
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Distribuye categorías en el grid */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px; /* Espacio para separar el formulario de las categorías */
+  }
+  
+  /* Estilo para cada sección de categoría */
+  .categoria {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .categoria h2 {
+    text-align: center;
+    color: #007bff;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para las listas de enlaces dentro de cada categoría */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  li {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  li:hover {
+    background-color: #e2e6ea;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #007bff;
+  }
+  
+  /* Media Queries para adaptar el diseño a pantallas pequeñas */
+  @media (max-width: 768px) {
+    .formulario {
+      width: 100%;
+    }
+  
+    main {
+      grid-template-columns: 1fr; /* Poner las categorías en una sola columna en pantallas pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .categoria h2 {
+      font-size: 1.4rem;
+    }
+  
+    label, input, select, button {
+      font-size: 0.9rem;
+    }
+  }
+  
