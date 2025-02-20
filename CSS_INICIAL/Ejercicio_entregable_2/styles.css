@@ -1,0 +1,86 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo del cuerpo */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+  }
+  
+  /* Menú principal */
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4a4e69;
+    border-bottom: 4px solid #22223b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Animación del logo */
+  .logo:hover {
+    transform: scale(1.1);
+    color: #c9ada7;
+  }
+  
+  /* Contenedor de enlaces */
+  .menu-items {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 20px;
+  }
+  
+  .menu-items li {
+    list-style: none;
+  }
+  
+  .menu-items a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: transparent;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+  }
+  
+  /* Efectos al pasar el ratón */
+  .menu-items a:hover {
+    background-color: #9a8c98;
+    transform: scale(1.1);
+  }
+  
+  /* Efecto de resaltar enlace activo */
+  .menu-items a.active {
+    background-color: #c9ada7;
+    color: #22223b;
+    font-weight: bold;
+  }
+  
+  /* Modificación en la alineación y comportamiento */
+  .menu-items li:nth-child(odd) {
+    align-self: flex-start;
+  }
+  
+  .menu-items li:nth-child(even) {
+    align-self: flex-end;
+  }
+  
