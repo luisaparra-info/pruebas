@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de la Compra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background: #f3f3f3;
+            margin: 5px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            cursor: pointer;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de la Compra</h1>
+    <input type="text" id="itemInput" placeholder="Añadir producto">
+    <button onclick="agregarItem()">Añadir</button>
+    <ul id="lista"></ul>
+    
+    <script>
+        const lista = document.getElementById("lista");
+        const itemInput = document.getElementById("itemInput");
+
+        function cargarLista() {
+            return new Promise((resolve, reject) => {
+                fetch("lista.json")
+                    .then(response => {
+                        if (!response.ok) throw new Error("Error al cargar la lista");
+                        return response.json();
+                    })
+                    .then(data => resolve(data.items))
+                    .catch(error => reject(error));
+            });
+        }
+
+        function agregarItem() {
+            const item = itemInput.value.trim();
+            if (!item) return;
+            itemInput.value = "";
+            procesarNuevoItem(item)
+                .then(renderizarItem)
+                .catch(error => console.error("Error al agregar item:", error));
+        }
+
+        function procesarNuevoItem(item) {
+            return new Promise((resolve) => {
+                setTimeout(() => resolve(item), 500);
+            });
+        }
+
+        function renderizarItem(item) {
+            const li = document.createElement("li");
+            li.innerHTML = `${item} <button onclick="eliminarItem(this)">X</button>`;
+            lista.appendChild(li);
+        }
+
+        function eliminarItem(boton) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    boton.parentElement.remove();
+                    resolve();
+                }, 300);
+            });
+        }
+
+        cargarLista()
+            .then(items => items.forEach(renderizarItem))
+            .catch(error => console.error("Error al cargar la lista:", error));
+    </script>
+</body>
+</html>
